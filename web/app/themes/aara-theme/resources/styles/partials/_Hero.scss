@@ -1,0 +1,87 @@
+.hero {
+  @apply relative overflow-hidden;
+
+  &__title {
+    @apply section-title mb-5;
+  }
+
+  &__left {
+    @apply py-10 xl:py-28;
+
+    width: 100%;
+
+    @screen lg {
+      width: 40%;
+    }
+    @screen xl {
+      width: 32.5%;
+    }
+  }
+
+  &__right {
+    @apply relative h-full;
+
+    &--decoration {
+      @apply absolute top-0 left-2 h-full object-contain;
+      width: 25%;
+      object-position: right top;
+      @screen lg {
+        width: 30%;
+        object-position: right center;
+      }
+    }
+  }
+
+  &__inner {
+    @apply relative z-10;
+  }
+
+  &__content {
+    max-width: 425px;
+    @apply typography;
+  }
+
+  &__action {
+    @apply relative;
+    margin-top: 40px;
+    padding-right: 80px;
+    &::after {
+      content: '';
+      background: url('../../images/arrow-curvy-bot-left.svg');
+      width: 80px;
+      height: 80px;
+      @apply hidden lg:block bottom-0 right-0 bg-contain bg-no-repeat absolute bg-center;
+    }
+  }
+
+  &__slider {
+    @apply h-full overflow-hidden ml-auto;
+
+    width: 80%;
+
+    @screen lg {
+      width: 70%;
+    }
+
+    &--slide {
+      @apply h-full overflow-hidden;
+    }
+    &--img {
+      @apply relative h-full w-full rounded-l-full overflow-hidden;
+      & > img {
+        @apply absolute h-full w-full object-cover object-center;
+      }
+    }
+
+    &--wrapper {
+      @apply lg:absolute top-0 right-0 w-full;
+
+      height: 250px;
+
+      @screen lg {
+        max-width: 67.5%;
+        @apply h-full;
+      }
+    }
+  }
+}

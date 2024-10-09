@@ -1,0 +1,15 @@
+.why-us {
+  @apply grid lg:grid-cols-2 gap-y-10 lg:gap-20 items-center;
+
+  &__title {
+    @apply section-title mb-5;
+  }
+
+  &__text {
+    @apply typography mb-10;
+  }
+
+  &__icons {
+    @apply grid grid-cols-2 gap-5;
+  }
+}

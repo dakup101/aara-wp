@@ -1,0 +1,29 @@
+.map {
+  @apply relative mb-56;
+
+  &__google {
+    height: 450px;
+  }
+
+  &__info {
+    @apply absolute left-1/2 -translate-x-1/2 w-full text-white;
+
+    top: 300px;
+
+    &--inner {
+      @apply bg-theme-blue px-5 md:px-16 text-center py-5 max-w-md rounded-xl mx-auto;
+    }
+
+    &--title {
+      @apply text-xl font-bold mb-5;
+    }
+
+    &--addr {
+      @apply mb-5 typography;
+    }
+
+    &--btn {
+      @apply flex justify-center;
+    }
+  }
+}

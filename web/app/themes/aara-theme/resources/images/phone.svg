@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="26.667067"
+   height="26.666668"
+   viewBox="0 0 26.667067 26.666668"
+   sodipodi:docname="phone.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 0,20 H 20 V 0 H 0 Z"
+         id="path14" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="phone"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,26.666667)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)">
+        <g
+           id="g18"
+           transform="translate(19.5934,4.9187)">
+          <path
+             d="m 0,0 -2.952,2.952 c -0.542,0.542 -1.429,0.542 -1.972,0 l -1.719,-1.72 -6.8,6.799 1.72,1.72 c 0.542,0.542 0.542,1.43 0,1.972 l -2.952,2.952 c -0.542,0.542 -1.429,0.542 -1.972,0 l -1.997,-1.998 c -1.266,-1.265 -1.266,-3.336 0,-4.601 L -6.599,-3.97 c 1.265,-1.265 3.336,-1.265 4.602,0 L 0,-1.972 C 0.542,-1.43 0.542,-0.542 0,0"
+             style="fill:#007aff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path20" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

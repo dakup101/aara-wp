@@ -1,0 +1,13 @@
+.breadcrumbs {
+  @apply text-sm pt-5 pb-10;
+
+  a {
+    &::hover {
+      @apply underline text-theme-blue-dark;
+    }
+  }
+
+  & .breadcrumb_last {
+    @apply text-theme-blue;
+  }
+}

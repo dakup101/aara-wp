@@ -1,0 +1,22 @@
+.offer-cta {
+  &__img {
+    @apply rounded-full overflow-hidden mb-10;
+    max-height: 350px;
+
+    & > img {
+      @apply w-full h-full object-cover object-center;
+    }
+  }
+
+  &__title {
+    @apply section-title mb-5 text-center;
+  }
+
+  &__desc {
+    @apply typography text-center mb-5;
+  }
+
+  &__button {
+    @apply flex justify-center;
+  }
+}

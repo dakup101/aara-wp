@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="135.411pt" height="234.469pt" viewBox="0 0 135.411 234.469">
+<defs>
+<clipPath id="clip_0">
+<path transform="matrix(1,0,0,-1,0,234.469)" d="M0 234.469H135.411V0H0Z"/>
+</clipPath>
+</defs>
+<g id="layer_1" data-name="">
+<g clip-path="url(#clip_0)">
+<path transform="matrix(1,0,0,-1,116.462,231.0524)" stroke-width="6.833" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#ffffff" d="M0 0H-97.513C-106.091 0-113.045 6.954-113.045 15.533V212.103C-113.045 220.682-106.091 227.636-97.513 227.636H0C8.578 227.636 15.533 220.682 15.533 212.103V15.533C15.533 6.954 8.578 0 0 0Z"/>
+<path transform="matrix(1,0,0,-1,4.8212,38.33499)" stroke-width="6.833" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#ffffff" d="M0 0H111.315"/>
+<path transform="matrix(1,0,0,-1,16.2192,185.0327)" stroke-width="6.833" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#ffffff" d="M0 0H114.942"/>
+<path transform="matrix(1,0,0,-1,77.8221,206.9565)" stroke-width="6.833" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#ffffff" d="M0 0C0-5.394-4.373-9.766-9.766-9.766-15.16-9.766-19.533-5.394-19.533 0-19.533 5.394-15.16 9.766-9.766 9.766-4.373 9.766 0 5.394 0 0Z"/>
+<path transform="matrix(1,0,0,-1,56.0357,20.373597)" stroke-width="6.833" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#ffffff" d="M0 0H24.04"/>
+</g>
+</g>
+</svg>

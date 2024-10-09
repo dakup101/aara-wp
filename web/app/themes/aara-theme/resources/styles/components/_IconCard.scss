@@ -1,0 +1,15 @@
+.icon-card {
+  @apply px-5 py-8 bg-theme-yellow rounded-lg;
+
+  &__icon {
+    @apply w-16 h-16 mx-auto mb-5;
+
+    & > img {
+      @apply w-full h-full object-contain object-center;
+    }
+  }
+
+  &__title {
+    @apply text-center font-bold block;
+  }
+}

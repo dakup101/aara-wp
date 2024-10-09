@@ -1,0 +1,44 @@
+.faq {
+  &__item {
+    @apply max-w-3xl mx-auto mb-5;
+  }
+
+  &__title {
+    @apply mb-10 section-title text-center;
+  }
+
+  &__question {
+    @apply px-5 py-2.5 flex justify-between w-full items-center text-left font-semibold text-theme-blue rounded-lg bg-theme-blue-light transition-all;
+    &::after {
+      content: '';
+      @apply bg-theme-blue block transition-all shrink-0;
+      margin-left: 1em;
+      width: 1.25em;
+      height: 1.25em;
+      mask: url('../../images/care-down.svg') no-repeat center / contain;
+    }
+
+    &.active {
+      @apply bg-theme-blue text-white shadow;
+      &::after {
+        @apply bg-white rotate-180;
+      }
+    }
+
+    &:hover {
+      @apply shadow-lg;
+    }
+  }
+
+  &__answer {
+    @apply overflow-hidden transition-all;
+
+    &--inner {
+      @apply p-5;
+    }
+
+    &:not(.show) {
+      @apply h-0;
+    }
+  }
+}

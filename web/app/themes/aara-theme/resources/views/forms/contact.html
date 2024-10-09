@@ -1,0 +1,31 @@
+<div class="form">
+
+    <div class="form__row">
+        <label class="form__label"> <span>Imię <span class="req">*</span></span>
+            [text* your-name class:form__input placeholder "Wpisz swoje imię"] </label>
+        
+        <label class="form__label"> <span>Nazwisko <span class="req">*</span></span>
+            [text* your-last-name class:form__input placeholder "Wpisz swoje nazwisko"] </label>
+    </div>
+
+    <div class="form__row">
+        <label class="form__label"> <span>Adres e-mail <span class="req">*</span></span>
+            [text* your-email class:form__input placeholder "Wpisz swój e-mail"] </label>
+
+        <label class="form__label"> <span>Numer telefonu <span class="req">*</span></span>
+            [text* your-tel class:form__input placeholder "Wpisz swój telefon"] </label>
+    </div>
+
+    <label class="form__label"> <span>Twoja wiadomość <span class="req">*</span></span>
+        [textarea your-message class:form__textarea placeholder "Wpisz swoją wiadomość"] </label>
+
+    <label class="form__label">
+        [acceptance acceptance-rodo class:form__rodo] Wyrażam zgodę na przetwarzanie podanych przeze mnie danych osobowych w niniejszym formularzu, w celu otrzymania odpowiedzi na zadane pytanie / rekrutacji przez Aara Sprzedaż Sp. z o.o. <a href="/polityka-prywatnosci/" target="_blank"">Polityka Prywatności</a> [/acceptance]</label>
+
+    <label class="form__label ">
+        [acceptance acceptance-marketing class:form__rodo] Wyrażam zgodę na przesyłanie informacji handlowej za pomocą środków komunikacji elektronicznej. <a href="/polityka-prywatnosci/" target="_blank"">Polityka Prywatności</a>
+        [/acceptance]</label>
+
+    [submit class:btn class:btn--accent-blue "Wyślij wiadomość"]
+
+</div>

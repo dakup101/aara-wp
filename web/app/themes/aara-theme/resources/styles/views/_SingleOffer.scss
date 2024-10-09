@@ -1,0 +1,119 @@
+.single-offer {
+  &__title {
+    @apply entity-title mb-5;
+  }
+
+  &__gallery {
+    @apply grid grid-cols-2 md:grid-cols-4 gap-5;
+
+    &--item {
+      @apply block w-full relative h-auto aspect-square rounded-lg overflow-hidden;
+
+      & > img {
+        @apply w-full h-full object-cover object-center;
+      }
+
+      & > span {
+        @apply opacity-0 rounded-lg flex bg-theme-blue/40 items-center justify-center absolute w-full h-full top-1/2 left-0 text-center uppercase text-white transition-all duration-200 scale-0 translate-y-1/3;
+      }
+
+      &:hover {
+        & > span {
+          @apply opacity-100 scale-100 -translate-y-1/2 font-semibold;
+        }
+      }
+    }
+  }
+
+  &__form {
+    & .contact__form {
+      @apply px-5;
+
+      & form {
+        @apply max-w-lg mx-auto;
+
+        .btn {
+          @apply mx-auto;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    // @apply grid md:grid-cols-2 gap-20 items-start;
+    @apply grid lg:grid-cols-2 gap-10 xl:gap-20 items-start;
+
+    &--img {
+      @apply overflow-hidden rounded-lg;
+
+      & > img {
+        @apply w-full;
+      }
+    }
+
+    &--text {
+      @apply typography mb-5;
+    }
+  }
+
+  &__details {
+    @apply grid lg:grid-cols-2 gap-5;
+
+    &--title {
+      @apply section-title mb-5;
+    }
+
+    &--text {
+      @apply typography mb-5;
+    }
+
+    &--content {
+      @apply relative text-sm lg:pr-32;
+    }
+
+    &--decoration {
+      @apply w-28 text-center hidden lg:flex flex-col items-center text-theme-blue absolute top-0 right-0;
+
+      & > figure {
+        @apply w-16 h-10 bg-current;
+        mask: url('../../images/arrow-curvy-top-left.svg') no-repeat center /
+          contain;
+      }
+
+      & > span {
+        @apply font-semibold text-sm rotate-6 pt-2 italic;
+      }
+    }
+  }
+
+  &__info {
+    @apply grid md:grid-cols-3 gap-20;
+
+    &--title {
+      @apply mb-10 section-title text-center;
+    }
+
+    &--pdf {
+      @apply flex w-full flex-col items-center;
+
+      & > img {
+        @apply w-full h-auto mb-5;
+      }
+
+      & > a {
+        @apply flex text-center font-semibold items-center text-theme-blue;
+        & > img {
+          @apply h-8 mr-2 shrink-0;
+        }
+      }
+    }
+
+    &--steps {
+      @apply md:col-span-2;
+
+      & > img {
+        @apply w-full rounded-lg;
+      }
+    }
+  }
+}

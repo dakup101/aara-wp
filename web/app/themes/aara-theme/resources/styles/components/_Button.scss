@@ -1,0 +1,66 @@
+.btn {
+  @apply py-3 px-5 rounded-md border font-semibold flex items-center shadow justify-center text-center w-fit transition-all cursor-pointer;
+  letter-spacing: 0.1em;
+
+  &:hover {
+    @apply shadow-lg;
+  }
+
+  &--accent-blue {
+    @apply bg-theme-blue border-theme-blue text-white;
+    &:hover {
+      @apply bg-theme-blue-dark border-theme-blue-dark;
+    }
+  }
+
+  &--accent-blue-stroke {
+    @apply bg-white border-theme-blue text-theme-blue;
+    &:hover {
+      @apply bg-theme-blue-dark border-theme-blue-dark;
+    }
+  }
+
+  &--white {
+    @apply bg-white border-white text-theme-blue;
+    &:hover {
+      @apply bg-theme-blue-dark border-theme-blue-dark text-white;
+    }
+  }
+
+  &--accent-text {
+    @apply p-0 text-theme-blue border-none relative shadow-none;
+    letter-spacing: 0.075em;
+
+    &:hover {
+      @apply text-theme-blue-dark shadow-none;
+
+      &::before {
+        @apply w-full bg-theme-blue-dark;
+      }
+    }
+
+    &::before {
+      content: '';
+      @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-theme-blue transition-all;
+    }
+  }
+
+  &--icon-start {
+    & > img {
+      @apply mr-2 shrink-0;
+      height: 1.75em;
+    }
+  }
+
+  &--arrow {
+    @apply flex items-center;
+
+    &::after {
+      content: '';
+      width: 1.25em;
+      height: 1.25em;
+      @apply bg-current ml-2 bg-center;
+      mask: url('../../images/arrow-right.svg') no-repeat center / cover;
+    }
+  }
+}

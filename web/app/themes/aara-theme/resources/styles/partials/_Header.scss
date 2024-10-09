@@ -1,0 +1,111 @@
+.header {
+  @apply border-b border-b-black/10 mb-10 fixed bg-white z-50 w-full top-0 left-0;
+  &__inner {
+    @apply py-7 flex justify-between items-center relative;
+  }
+  &__logo {
+    & > img {
+      @apply h-10 lg:h-12;
+    }
+  }
+
+  &__mobile-trigger {
+    @apply btn btn--accent-blue flex xl:hidden items-center justify-center;
+    padding: 0.25em !important;
+
+    svg {
+      @apply w-10 h-10 fill-current;
+    }
+  }
+
+  &__nav {
+    @apply shadow-2xl xl:shadow-none absolute xl:static w-full xl:w-fit top-24 xl:top-0 left-0 xl:left-auto bg-white xl:flex xl:items-center transition-all duration-300;
+
+    &:not(.show) {
+      @apply opacity-0 xl:opacity-100 shadow-none -translate-x-full xl:translate-x-0;
+    }
+
+    @screen xl {
+      padding-right: 160px;
+    }
+  }
+
+  &__menu {
+    @apply flex xl:flex-row flex-col;
+
+    & > li {
+      @apply xl:mr-5;
+
+      & > a {
+        @apply border-b border-b-theme-blue/20 xl:border-none flex py-2.5 justify-center xl:justify-end px-10 xl:p-0 items-center transition-all;
+
+        &:hover {
+          @apply text-theme-blue-dark;
+        }
+      }
+
+      &.tel {
+        & > a {
+          @apply font-semibold text-theme-blue;
+          &::before {
+            content: '';
+            @apply block bg-current mr-2;
+            height: 1.25em;
+            width: 1.25em;
+            mask: url('../../images/phone.svg') no-repeat center / contain;
+          }
+
+          &:hover {
+            @apply text-theme-blue-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mega-menu {
+  @apply absolute top-full -translate-y-3.5 left-0 w-full bg-white rounded-2xl p-3 shadow-xl hidden lg:grid grid-cols-6 gap-5 z-50 opacity-100 transition-all;
+
+  &__item {
+    @apply flex flex-col items-center p-2 rounded-lg transition-all;
+
+    &--img {
+      @apply w-2/3 mx-auto h-auto aspect-square rounded-lg overflow-hidden mb-5;
+
+      & > img {
+        @apply w-full h-full object-cover object-center;
+      }
+    }
+
+    &--title {
+      @apply text-center;
+    }
+
+    &:hover {
+      @apply shadow-xl text-theme-blue;
+    }
+  }
+
+  &:not(.show) {
+    @apply opacity-0 pointer-events-none translate-y-10;
+  }
+}
+
+.mega-menu-trigger {
+  & > a {
+    @apply flex items-center;
+
+    &::after {
+      content: '';
+      @apply hidden lg:block bg-current ml-2;
+      height: 1em;
+      width: 1em;
+      mask: url('../../images/care-down.svg') no-repeat center / contain;
+    }
+
+    &.active {
+      @apply text-theme-blue;
+    }
+  }
+}

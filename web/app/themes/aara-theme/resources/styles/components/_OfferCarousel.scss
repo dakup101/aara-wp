@@ -1,0 +1,92 @@
+.offer-carousel {
+  @apply relative py-10 rounded-lg;
+
+  &__inner {
+    @apply relative;
+    &::after {
+      content: '';
+
+      @apply absolute top-0 left-0 w-32 h-full -translate-x-full z-10;
+      background: linear-gradient(
+        90deg,
+        #fff 0%,
+        rgba(255, 255, 255, 0.59) 75%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      left: -8%;
+      width: 275px;
+    }
+    &::before {
+      content: '';
+
+      @apply absolute top-0 w-32 h-full translate-x-full z-10;
+      background: linear-gradient(
+        -90deg,
+        #fff 0%,
+        rgba(255, 255, 255, 0.59) 75%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      right: -8%;
+      width: 275px;
+    }
+  }
+
+  &__decoration {
+    @apply absolute top-0 left-0 w-full h-full overflow-hidden rounded-lg scale-105;
+
+    &::after {
+      content: '';
+      @apply absolute w-full h-2/3 bg-theme-blue-light bottom-0 left-0 rounded-lg;
+    }
+
+    &::before {
+      content: '';
+      @apply absolute w-full h-auto aspect-square bg-theme-blue-light top-0 right-0 rounded-full;
+      transform: translateX(35%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  &__title {
+    @apply w-fit ml-auto section-title mb-10;
+  }
+
+  &__swiper {
+    @apply mb-10;
+  }
+
+  &__btn {
+    @apply flex justify-center;
+  }
+}
+
+.offer-carousel-item {
+  @apply shadow rounded-xl rounded-bl-none bg-white;
+  &__thumb {
+    @apply block rounded-xl aspect-square w-full h-auto overflow-hidden rounded-bl-none;
+    & > img {
+      @apply w-full h-full object-cover object-center;
+    }
+  }
+
+  &__content {
+    @apply p-4 flex items-center;
+  }
+
+  &__title {
+    @apply font-bold line-clamp-3 text-ellipsis w-full;
+    height: calc(3 * 1.75em);
+  }
+
+  &__btn {
+    @apply shadow w-12 h-12 flex items-center justify-center shrink-0 bg-theme-blue rounded-full ml-3 relative transition-all;
+    &::after {
+      content: '';
+      mask: url('../../images/care-right.svg') no-repeat center / contain;
+      @apply w-6 h-6 bg-white;
+    }
+    &:hover {
+      @apply bg-theme-blue-dark shadow-lg;
+    }
+  }
+}

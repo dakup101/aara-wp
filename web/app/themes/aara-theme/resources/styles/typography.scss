@@ -1,0 +1,49 @@
+.typography {
+  p {
+    @apply mb-5;
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+
+  a {
+    @apply text-theme-blue underline underline-offset-4 font-semibold;
+  }
+
+  b,
+  strong {
+    @apply font-semibold;
+  }
+
+  ul,
+  ol {
+    @apply mb-5;
+
+    li {
+      @apply mb-2;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 1em;
+    li {
+      &::marker {
+        @apply text-theme-blue;
+      }
+    }
+  }
+}
+
+.section-title {
+  @apply text-3xl font-extrabold;
+}
+
+.entity-title {
+  @apply text-4xl font-extrabold;
+}
+
+@font-face {
+  font-family: 'Jakarta';
+  src: url('../fonts/Jakarta.ttf') format('truetype');
+}

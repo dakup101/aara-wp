@@ -1,0 +1,88 @@
+.offer-interactive {
+  @apply relative z-10;
+
+  &__img {
+    @apply rounded-lg overflow-hidden;
+
+    & > img {
+      @apply w-full h-auto;
+    }
+  }
+
+  &__guide {
+    @apply absolute top-0 left-0 w-full h-full;
+
+    &--item {
+      @apply w-full left-0;
+
+      &:has(.show) {
+        @apply z-50;
+      }
+    }
+
+    &--item,
+    &--pin {
+      @apply absolute z-10;
+    }
+
+    &--pin {
+      bottom: calc(100% + 1rem);
+      @apply -translate-x-1/2 left-1/2 z-20;
+      width: 100%;
+      max-width: 220px;
+      @screen sm {
+        max-width: 480px;
+      }
+    }
+
+    &--trigger {
+      @apply w-12 h-12 bg-white shadow-lg rounded-full font-bold flex items-center justify-center transition-all;
+
+      &:hover {
+        @apply bg-theme-blue-dark text-white shadow-xl;
+      }
+
+      &.active {
+        @apply bg-theme-blue text-white shadow-none z-30;
+      }
+    }
+  }
+
+  &__pin {
+    @apply relative grid sm:grid-cols-2 bg-theme-blue-light rounded-lg shadow-xl;
+
+    animation: append-animate 0.15s linear;
+
+    &--img {
+      @apply relative overflow-hidden rounded-lg;
+      & > img {
+        @apply sm:absolute top-0 left-0 w-full h-full object-cover object-center;
+      }
+    }
+
+    &--inner {
+      @apply p-5 text-sm typography;
+    }
+
+    &--title {
+      @apply mb-3 font-bold;
+    }
+
+    &--close {
+      @apply absolute top-0 right-0 w-12 h-12 bg-white shadow-lg rounded-full translate-x-1/2 -translate-y-1/2 transition-all;
+
+      &::after {
+        content: '';
+        @apply bg-black absolute w-6 h-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+        mask: url('../../images/close.svg') no-repeat center / contain;
+      }
+
+      &:hover {
+        @apply bg-theme-blue-dark shadow-xl;
+        &::after {
+          @apply bg-white;
+        }
+      }
+    }
+  }
+}

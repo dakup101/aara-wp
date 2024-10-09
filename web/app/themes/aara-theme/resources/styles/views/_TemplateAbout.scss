@@ -1,0 +1,42 @@
+.about {
+  &__title {
+    @apply entity-title mb-10 text-center;
+  }
+
+  &__subtitle {
+    @apply mb-5 section-title;
+  }
+
+  &__part {
+    @apply typography max-w-5xl mx-auto;
+  }
+
+  &__banner {
+    @apply rounded-lg overflow-hidden;
+    aspect-ratio: 3 / 1;
+
+    & > img {
+      @apply w-full h-full object-cover object-center;
+    }
+  }
+
+  &__text-img {
+    @apply grid md:grid-cols-2 gap-y-10 md:gap-20 items-start;
+
+    &--img {
+      @apply h-full w-full relative rounded-lg overflow-hidden;
+
+      & > img {
+        @apply md:absolute top-0 left-0 w-full h-full object-cover object-center;
+      }
+    }
+
+    &--text {
+      @apply py-10;
+    }
+
+    &--btn {
+      @apply mt-5;
+    }
+  }
+}

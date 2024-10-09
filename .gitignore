@@ -1,0 +1,40 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/themes/twentytwentyfour/
+web/app/upgrade
+web/app/cache/*
+
+# Theme
+web/app/themes/aara-theme/node_modules
+web/app/themes/aara-theme/vendor
+web/app/themes/aara-theme/public
+web/app/themes/aara-theme/.env
+web/app/themes/aara-theme/.budfiles
+web/app/themes/aara-theme/npm-debug.log
+web/app/themes/aara-theme/yarn-error.log
+
+*.DS_Store
+auth.json
+vendor/
+
+# WordPress
+web/wp
+
+# web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+# /vendor
+
+# WP-CLI
+wp-cli.local.yml

@@ -1,0 +1,46 @@
+.footer {
+  @apply pb-10;
+
+  &__languages {
+    @apply flex lg:justify-start justify-center flex-wrap;
+  }
+
+  &__top {
+    @apply grid text-center lg:text-left lg:grid-cols-3 gap-10 pb-10 mb-10 border-b border-black/20;
+  }
+
+  &__logo {
+    @apply block mb-5 mx-auto lg:mx-0;
+
+    max-width: 160px;
+
+    @screeng lg {
+      max-width: 220px;
+    }
+
+    & > img {
+      @apply w-full;
+    }
+  }
+
+  &__title {
+    @apply text-xl font-bold mb-3;
+  }
+
+  &__bot {
+    @apply grid lg:grid-cols-3 gap-10 items-end;
+  }
+
+  &__copyright {
+    @apply text-center text-xs;
+  }
+
+  &__everywhere {
+    & > a {
+      @apply block mx-auto lg:mr-0 lg:ml-auto w-fit;
+      & > img {
+        @apply w-14 h-14;
+      }
+    }
+  }
+}

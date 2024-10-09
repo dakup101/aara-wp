@@ -1,0 +1,43 @@
+.offer-archive {
+  &__title {
+    @apply entity-title mb-5 text-center;
+  }
+
+  &__desc {
+    @apply typography text-center max-w-5xl mx-auto;
+  }
+
+  &__item {
+    &--title {
+      @apply text-2xl font-semibold mb-5 text-center;
+    }
+
+    &--link {
+      @apply block relative rounded-full mx-auto overflow-hidden;
+
+      max-width: 225px;
+
+      & > span {
+        @apply opacity-0 rounded-full flex bg-theme-blue/40 items-center justify-center absolute w-full h-full top-1/2 left-0 text-center uppercase text-white transition-all duration-200 scale-0 translate-y-1/3;
+      }
+
+      &:hover {
+        & > span {
+          @apply opacity-100 scale-100 -translate-y-1/2 font-semibold;
+        }
+      }
+    }
+
+    &--thumb {
+      @apply aspect-square;
+
+      & > img {
+        @apply w-full h-full object-cover object-center;
+      }
+    }
+  }
+
+  &__posts {
+    @apply grid md:grid-cols-3 items-end gap-x-10 gap-y-16 max-w-5xl mx-auto;
+  }
+}

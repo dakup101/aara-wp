@@ -1,0 +1,32 @@
+.icons-info {
+  @apply bg-theme-dark py-10;
+
+  border-top-left-radius: 80px;
+
+  @screen md {
+    border-top-left-radius: 120px;
+  }
+
+  &__title {
+    @apply section-title text-center text-white mb-10;
+  }
+
+  &__row {
+    @apply flex items-start justify-center flex-wrap;
+  }
+
+  &__item {
+    @apply px-5 text-white basis-full sm:basis-1/2 lg:basis-1/3 flex flex-col items-center mb-10 lg:mb-0 text-center;
+
+    &--icon {
+      @apply w-20 h-20 md:w-28 md:h-28 mb-5;
+      & > img {
+        @apply w-full h-full object-contain object-center rounded-lg;
+      }
+    }
+
+    &--title {
+      @apply text-xl font-semibold;
+    }
+  }
+}

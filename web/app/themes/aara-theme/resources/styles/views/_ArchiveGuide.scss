@@ -1,0 +1,69 @@
+.guide-archive {
+  &__title {
+    @apply entity-title mb-10 text-center;
+  }
+
+  &__desc {
+    @apply max-w-3xl w-full typography text-center mx-auto flex items-center;
+
+    &--decoration {
+      @apply md:w-20 shrink-0 md:pr-5;
+
+      &::after {
+        content: '';
+        @apply hidden md:block h-32 bg-theme-blue;
+        mask: url('../../images/arrow-curvy-top-bot-left.svg') no-repeat center /
+          contain;
+      }
+    }
+
+    &--content {
+      @apply w-full typography md:pr-20 text-center;
+    }
+  }
+
+  &__posts {
+    @apply grid lg:grid-cols-2 gap-10 max-w-4xl mx-auto;
+  }
+
+  &__pdfs {
+    &--item {
+      @apply flex w-fit mb-5 text-center font-semibold items-center text-theme-blue;
+      & > img {
+        @apply h-8 mr-2 shrink-0;
+      }
+
+      &:last-child() {
+        @apply mb-0;
+      }
+    }
+  }
+}
+
+.guide-archive-item {
+  @apply p-5 rounded-lg flex items-start bg-theme-blue-light transition-all shadow;
+
+  &:hover {
+    @apply bg-theme-blue-dark text-white shadow-lg;
+  }
+
+  &__icon {
+    @apply w-12 h-12 shrink-0 mr-8 overflow-hidden;
+
+    & > img {
+      @apply w-full h-full object-contain object-center;
+    }
+  }
+
+  &__content {
+    @apply py-1;
+  }
+
+  &__title {
+    @apply mb-3 font-semibold;
+  }
+
+  &__excerpt {
+    @apply text-sm line-clamp-3 text-ellipsis;
+  }
+}

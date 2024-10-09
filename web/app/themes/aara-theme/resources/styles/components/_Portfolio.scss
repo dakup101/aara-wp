@@ -1,0 +1,135 @@
+.portfolio {
+  @apply py-10 bg-theme-yellow;
+  &__title {
+    @apply entity-title text-center mb-10;
+  }
+
+  &__inner {
+    @apply relative;
+  }
+
+  &__nav {
+    @apply flex;
+    &--next,
+    &--prev {
+      @apply bg-white flex w-12 h-12 rounded-full shadow-black/20 shadow-lg cursor-pointer transition-all;
+      opacity: 100% !important;
+      &::after {
+        content: '';
+        @apply w-6 h-6 block bg-theme-blue transition-all;
+      }
+
+      &:hover {
+        @apply bg-theme-blue-dark;
+
+        &::after {
+          @apply bg-white;
+        }
+      }
+    }
+
+    &--prev {
+      @apply mr-3;
+      &::after {
+        mask: url('../../images/care-left.svg') no-repeat center / contain;
+      }
+    }
+
+    &--next {
+      &::after {
+        mask: url('../../images/care-right.svg') no-repeat center / contain;
+      }
+    }
+  }
+
+  &__slider {
+    @apply max-w-5xl mx-auto;
+
+    & .swiper {
+      &-button {
+        &-disabled {
+          @apply shadow-none pointer-events-none;
+          opacity: 0% !important;
+          background: none !important;
+          &::after {
+            @apply bg-black;
+          }
+        }
+      }
+    }
+
+    & .swiper-slide {
+      @apply transition-all;
+
+      &:not(.swiper-slide-active) {
+        @apply scale-75;
+
+        .portfolio-item {
+          &__content {
+            @apply scale-x-0;
+          }
+        }
+      }
+
+      &-prev {
+        .portfolio-item {
+          &__thumb {
+            @apply order-2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.portfolio-item {
+  @apply flex flex-col md:grid md:grid-cols-3 gap-10 items-start  mx-auto;
+
+  &.image {
+    @apply grid-cols-1 gap-0;
+  }
+
+  &__thumb {
+    @apply p-5 mx-auto rounded-lg bg-white/30;
+
+    max-width: 300px;
+
+    &--img {
+      @apply w-full h-auto aspect-square;
+
+      & > img {
+        @apply w-full h-full object-cover object-center rounded-lg;
+      }
+    }
+  }
+
+  &__content {
+    @apply w-full md:col-span-2 transition-all;
+
+    & .btn {
+      @apply mx-auto md:mr-auto md:ml-0;
+    }
+  }
+
+  &__title {
+    @apply md:text-left text-center text-2xl font-extrabold mb-5;
+  }
+
+  &__brand {
+    @apply grid grid-cols-2 gap-5 text-lg font-bold mb-3 pb-3 border-b border-black;
+  }
+  &__specs {
+    @apply mb-10;
+    &--item {
+      @apply grid grid-cols-2 gap-5 mb-2;
+
+      &:last-child() {
+        @apply mb-0;
+      }
+    }
+
+    &--label {
+      @apply font-bold;
+    }
+  }
+}
